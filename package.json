@@ -1,6 +1,6 @@
 {
   "name": "remix-typescript-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Remix starter template with TypeScript + Tailwind CSS",
   "license": "MIT",
   "author": "Martín M.",
@@ -9,7 +9,8 @@
     "build": "npm run build:css && remix build",
     "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
     "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
-    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css"
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
+    "lint": "eslint app/ --ext=.ts,.tsx"
   },
   "dependencies": {
     "@prisma/client": "^4.0.0",
@@ -30,7 +31,11 @@
     "autoprefixer": "^10.4.7",
     "concurrently": "^7.2.2",
     "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
     "prisma": "^4.0.0",
     "tailwindcss": "^3.1.4",
     "typescript": "^4.6.4"
